@@ -1,7 +1,7 @@
 # homelab
 Notes for my homelab
 
-This is an all-new VCF 9.1 lab. I am using William Lam's hardware recommendations and following his blog.
+This is an all-new VCF 9.1 lab. I am using William Lam's hardware recommendations and following his blog. The main blog post is the [VCF 9.1 lab in a box](https://github.com/lamw/vcf-91-in-box)
 
 # Hardware BOM and expense
 CyberPower CP1500PFCLCD PFC Sinewave UPS Battery Backup (Amazon link goes here)  
@@ -22,7 +22,14 @@ Battery protected:
 
 ## Data
 
-Mikrotik
+The Mikrotik router is being cabled in the same manner as in the [William Lam's VCF 9 Lab Network diagram post](https://williamlam.com/2025/09/my-vcf-9-lab-network-diagram.html) and I am using the same 10G RJ45 to SFP connectors William recommends in this [BOM post](https://williamlam.com/2025/07/vcf-9-0-hardware-bom-for-silicon-valley-vmug.html)
+
+Port
+| Port | Connects to |  
+| --- | --- |  
+| Port 1 | ASUS uplink router LAN 1 (1GB) |  
+| Port 2 | MS-A2 host SFP port 1 (10GB with adapter) |  
+| Port 3 | MS-A2 host SFP port 1 (10GB with adapter) |  
 
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
