@@ -4,10 +4,10 @@ Notes for my homelab
 This is an all-new VCF 9.1 lab. I am using William Lam's hardware recommendations and following his blog.
 
 # Hardware BOM and expense
-CyberPower CP1500PFCLCD PFC Sinewave UPS Battery Backup (Amazon link goes here)
-MikroTik CRS304-4XG-IN (check [William Lam post](https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html) for his Amazon link)
-Two "10Gtek 𝟭.𝟮𝟱/𝟮.𝟱/𝟱/𝟭𝟬𝗚-𝗧 𝗦𝗙𝗣+ 𝘁𝗼 𝗥𝗝𝟰𝟱 CAT.6a Copper Transceiver"
-Two "MINISFORUM AMD Ryzen 9 9955HX Barebone with MS-A2 Mini PC"
+CyberPower CP1500PFCLCD PFC Sinewave UPS Battery Backup (Amazon link goes here)  
+MikroTik CRS304-4XG-IN - check [William Lam post](https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html) for his Amazon link  
+Two "10Gtek 𝟭.𝟮𝟱/𝟮.𝟱/𝟱/𝟭𝟬𝗚-𝗧 𝗦𝗙𝗣+ 𝘁𝗼 𝗥𝗝𝟰𝟱 CAT.6a Copper Transceiver"  
+Two "MINISFORUM AMD Ryzen 9 9955HX Barebone with MS-A2 Mini PC"  
 
 # Cabling
 
