@@ -18,8 +18,8 @@ VCF Hosts: Two slightly different "MINISFORUM AMD Ryzen 9 9955HX Barebone with M
 The UPS has 6 battery powered outlets and 6 protected outlets.
 
 Battery protected:
-1. MS-A2 host 
-2. MS-A2 host
+1. MS-A2 host1 
+2. MS-A2 host2
 3. Mikrotik Router
 4. Asus Router
 
@@ -41,3 +41,71 @@ Relevant Mikrotik William Lam posts:
 https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html#more-189493
 
 Updated RouterOS using WinBox to 7.23.3 (2026-Jul-30 14:17)
+
+# Host details
+
+## BIOS update
+
+Use this blog post for [updating firmware](https://williamlam.com/2025/07/quick-tip-updating-firmware-on-minisforum-ms-a2.html). I am currently on v1.03. 
+
+These are the BIOS settings I ended up selecting (note some are discussed in the comments by James and not the main blog post):
+
+
+
+## Hardware details
+
+This [blog post](https://williamlam.com/2025/06/vmware-cloud-foundation-vcf-on-minisforum-ms-a2.html) goes in depth on the virtues of the MS-A2 platform. I have 2 hosts with slightly different configuration. This will become important when I create the Kickstart files. 
+
+From the [main vcf in a box 9.1 post](https://github.com/lamw/vcf-91-in-box) :
+
+_To identify the NVMe device label for the ESX installation (e.g. --disk=<ID>) and NVMe tiering device (e.g. NVME_TIERING_DEVICE=), boot the ESX installer initially, switch to the shell console (ALT+F1), and log in as root with a blank password (just press Enter). Enable SSH using /etc/init.d/SSH start, identify the IP address, SSH to the in-memory ESX host, and run vdq -q to list all storage devices._
+
+Fir the "identify the IP address", assuming you have DHCP and IPv4, I used the following command:
+
+'''esxcfg-info | grep "IPv4 Address"'''
+
+Host 1:
+
+Using esxcfg-info | more
+
+|----BIOS Vendor..............................................American Megatrends International, LLC.
+      |----BIOS Version.............................................1.03 (5.36)
+      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00
+      |----BIOS Asset Tag...........................................Default string
+      |----BIOS Firmware Type.......................................1
+      |----Product Name.............................................MS-A2
+      |----Vendor Name..............................................Micro Computer (HK) Tech Limited
+      |----Family...................................................MINISFORUM
+
+ \==+CPU Info :
+         |----Num Packages..........................................1
+         |----Num Cores.............................................16
+         |----Num Licensable Cores..................................16
+         |----Num Threads...........................................32
+         |----Hyperthreading Active.................................true
+         |----Hyperthreading Supported..............................true
+         |----Hyperthreading Enabled................................true
+         |----Hyperthreading Mitigated..............................true
+
+Confirm this is a Ryzen 9 on Zen5 architecture
+                     |----ID........................................18
+                     |----Family....................................26
+                     |----Model.....................................68
+
+\==+CPU Power Management Info :
+         |----Current Policy........................................Balanced
+         |----Hardware Support......................................ACPI P-states, ACPI C-states
+
+Physical Mem..........................................66229465088 bytes
+
+
+
+"Name":  "t10.NVMe____Samsung_SSD_990_PRO_2TB_________________3B6D415144382500"
+"Name":  "t10.NVMe____Samsung_SSD_990_EVO_Plus_1TB____________88AB425157382500"
+"Name":  "t10.NVMe____SHGP312D500GM____________________________C1D9E326002EE4AC"
+
+Remember the 3 SSDs will be used in this manner:
+
+NVMe 1: ESXi installation, ESX-OSData and VMFS volume
+NVMe 2: NVMe Tiering
+NVMe 3: vSAN ESA
