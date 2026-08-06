@@ -62,7 +62,7 @@ _To identify the NVMe device label for the ESX installation (e.g. --disk=<ID>) a
 
 Fir the "identify the IP address", assuming you have DHCP and IPv4, I used the following command:
 
-'''esxcfg-info | grep "IPv4 Address"'''
+```esxcfg-info | grep "IPv4 Address"```
 
 Host 1:
 
