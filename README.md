@@ -5,11 +5,13 @@ This is an all-new VCF 9.1 lab. I am using William Lam's hardware recommendation
 
 # Hardware BOM
 
-UPS: CyberPower CP1500PFCLCD PFC Sinewave [UPS Battery Backup](https://amzn.to/4xcXysT) please note this is my Amazon affiliate link and this is my first time using this UPS, YMMV   
-Internet Router: ASUS  
-VCF Lab Router: MikroTik CRS304-4XG-IN - check [William Lam post](https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html) for his Amazon link  
-10GB SFP to RJ45 connectors: Two "10Gtek 𝟭.𝟮𝟱/𝟮.𝟱/𝟱/𝟭𝟬𝗚-𝗧 𝗦𝗙𝗣+ 𝘁𝗼 𝗥𝗝𝟰𝟱 CAT.6a Copper Transceiver" recommended by William in his posts, for example this [BOM post](https://williamlam.com/2025/07/vcf-9-0-hardware-bom-for-silicon-valley-vmug.html)  
-VCF Hosts: Two slightly different "MINISFORUM AMD Ryzen 9 9955HX Barebone with MS-A2 Mini PC" recommended by William in this [hardware review](https://williamlam.com/2025/06/vmware-cloud-foundation-vcf-on-minisforum-ms-a2.html)     
+| Component | Affiliate Link |  
+| --- | --- |  
+| UPS | CyberPower CP1500PFCLCD PFC Sinewave [UPS Battery Backup](https://amzn.to/4xcXysT) please note this is my Amazon affiliate link and this is my first time using this UPS, YMMV |   
+|Internet Router | ASUS | 
+| VCF Lab Router | MikroTik CRS304-4XG-IN - check [William Lam post](https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html) for his Amazon link |  
+| 10GB SFP to RJ45 connectors | Two "10Gtek 𝟭.𝟮𝟱/𝟮.𝟱/𝟱/𝟭𝟬𝗚-𝗧 𝗦𝗙𝗣+ 𝘁𝗼 𝗥𝗝𝟰𝟱 CAT.6a Copper Transceiver" recommended by William in his posts, for example this [BOM post](https://williamlam.com/2025/07/vcf-9-0-hardware-bom-for-silicon-valley-vmug.html) |  
+| VCF Hosts | Two slightly different "MINISFORUM AMD Ryzen 9 Barebone with MS-A2 Mini PC" recommended by William in this [hardware review](https://williamlam.com/2025/06/vmware-cloud-foundation-vcf-on-minisforum-ms-a2.html) |   
 
 
 # Cabling
@@ -42,6 +44,7 @@ https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-
 
 Updated RouterOS using WinBox to 7.23.3 (2026-Jul-30 14:17)
 
+
 # Host details
 
 ## BIOS update
@@ -50,6 +53,7 @@ Use this blog post for [updating firmware](https://williamlam.com/2025/07/quick-
 
 These are the BIOS settings I ended up selecting (note some are discussed in the comments by James and not the main blog post):
 
+Screen pictures to follow
 
 
 ## Hardware details
@@ -69,46 +73,48 @@ For the "identify the IP address" part, assuming you have DHCP and IPv4, I used 
 Using ```esxcfg-info | more```
 
 This confirms BIOS  
-|----BIOS Vendor..............................................American Megatrends International, LLC.
-      |----BIOS Version.............................................1.03 (5.36)
-      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00
-      |----BIOS Asset Tag...........................................Default string
-      |----BIOS Firmware Type.......................................1
-      |----Product Name.............................................MS-A2
-      |----Vendor Name..............................................Micro Computer (HK) Tech Limited
-      |----Family...................................................MINISFORUM
+|----BIOS Vendor..............................................American Megatrends International, LLC.  
+      |----BIOS Version.............................................1.03 (5.36)  
+      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00  
+      |----BIOS Asset Tag...........................................Default string  
+      |----BIOS Firmware Type.......................................1  
+      |----Product Name.............................................MS-A2  
+      |----Vendor Name..............................................Micro Computer (HK) Tech Limited  
+      |----Family...................................................MINISFORUM  
 
 This confirms the cores and hyperthreading settings  
- \==+CPU Info :
-         |----Num Packages..........................................1
-         |----Num Cores.............................................16
-         |----Num Licensable Cores..................................16
-         |----Num Threads...........................................32
-         |----Hyperthreading Active.................................true
-         |----Hyperthreading Supported..............................true
-         |----Hyperthreading Enabled................................true
-         |----Hyperthreading Mitigated..............................true
+ \==+CPU Info :  
+         |----Num Packages..........................................1  
+         |----Num Cores.............................................16  
+         |----Num Licensable Cores..................................16  
+         |----Num Threads...........................................32  
+         |----Hyperthreading Active.................................true  
+         |----Hyperthreading Supported..............................true  
+         |----Hyperthreading Enabled................................true  
+         |----Hyperthreading Mitigated..............................true  
 
 This confirms a Ryzen 9 on Zen5 architecture  
-                     |----ID........................................18
-                     |----Family....................................26
-                     |----Model.....................................68
+                     |----ID........................................18  
+                     |----Family....................................26  
+                     |----Model.....................................68  
 
 Power policy  
-\==+CPU Power Management Info :
-         |----Current Policy........................................Balanced
-         |----Hardware Support......................................ACPI P-states, ACPI C-states
+\==+CPU Power Management Info :  
+         |----Current Policy........................................Balanced  
+         |----Hardware Support......................................ACPI P-states, ACPI C-states  
 
 64GB of RAM  
-Physical Mem..........................................66229465088 bytes
+Physical Mem..........................................66229465088 bytes  
 
 Installed drives:  
-"Name":  "t10.NVMe____Samsung_SSD_990_PRO_2TB_________________3B6D415144382500"
-"Name":  "t10.NVMe____Samsung_SSD_990_EVO_Plus_1TB____________88AB425157382500"
-"Name":  "t10.NVMe____SHGP312D500GM____________________________C1D9E326002EE4AC"
+"Name":  "t10.NVMe____Samsung_SSD_990_PRO_2TB_________________3B6D415144382500"  
+"Name":  "t10.NVMe____Samsung_SSD_990_EVO_Plus_1TB____________88AB425157382500"  
+"Name":  "t10.NVMe____SHGP312D500GM____________________________C1D9E326002EE4AC"  
+
+
 
 Remember the 3 SSDs will be used in this manner:
 
-NVMe 1: ESXi installation, ESX-OSData and VMFS volume
-NVMe 2: NVMe Tiering
-NVMe 3: vSAN ESA
+NVMe 1: ESXi installation, ESX-OSData and VMFS volume  
+NVMe 2: NVMe Tiering  
+NVMe 3: vSAN ESA  
