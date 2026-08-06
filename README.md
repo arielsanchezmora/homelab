@@ -60,7 +60,7 @@ From the [main vcf in a box 9.1 post](https://github.com/lamw/vcf-91-in-box) :
 
 _To identify the NVMe device label for the ESX installation (e.g. --disk=<ID>) and NVMe tiering device (e.g. NVME_TIERING_DEVICE=), boot the ESX installer initially, switch to the shell console (ALT+F1), and log in as root with a blank password (just press Enter). Enable SSH using /etc/init.d/SSH start, identify the IP address, SSH to the in-memory ESX host, and run vdq -q to list all storage devices._
 
-Fir the "identify the IP address", assuming you have DHCP and IPv4, I used the following command:
+For the "identify the IP address" part, assuming you have DHCP and IPv4, I used the following command:
 
 ```esxcfg-info | grep "IPv4 Address"```
 
