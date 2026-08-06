@@ -64,10 +64,11 @@ Fir the "identify the IP address", assuming you have DHCP and IPv4, I used the f
 
 ```esxcfg-info | grep "IPv4 Address"```
 
-Host 1:
+### Host 1:
 
-Using esxcfg-info | more
+Using ```esxcfg-info | more```
 
+This confirms BIOS  
 |----BIOS Vendor..............................................American Megatrends International, LLC.
       |----BIOS Version.............................................1.03 (5.36)
       |----BIOS ReleaseDate.........................................2026-04-01T00:00:00
@@ -77,6 +78,7 @@ Using esxcfg-info | more
       |----Vendor Name..............................................Micro Computer (HK) Tech Limited
       |----Family...................................................MINISFORUM
 
+This confirms the cores and hyperthreading settings  
  \==+CPU Info :
          |----Num Packages..........................................1
          |----Num Cores.............................................16
@@ -87,19 +89,20 @@ Using esxcfg-info | more
          |----Hyperthreading Enabled................................true
          |----Hyperthreading Mitigated..............................true
 
-Confirm this is a Ryzen 9 on Zen5 architecture
+This confirms a Ryzen 9 on Zen5 architecture  
                      |----ID........................................18
                      |----Family....................................26
                      |----Model.....................................68
 
+Power policy  
 \==+CPU Power Management Info :
          |----Current Policy........................................Balanced
          |----Hardware Support......................................ACPI P-states, ACPI C-states
 
+64GB of RAM  
 Physical Mem..........................................66229465088 bytes
 
-
-
+Installed drives:  
 "Name":  "t10.NVMe____Samsung_SSD_990_PRO_2TB_________________3B6D415144382500"
 "Name":  "t10.NVMe____Samsung_SSD_990_EVO_Plus_1TB____________88AB425157382500"
 "Name":  "t10.NVMe____SHGP312D500GM____________________________C1D9E326002EE4AC"
