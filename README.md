@@ -73,33 +73,33 @@ For the "identify the IP address" part, assuming you have DHCP and IPv4, I used 
 Using ```esxcfg-info | more```
 
 This confirms BIOS  
-      |----BIOS Vendor..............................................American Megatrends International, LLC.  
-      |----BIOS Version.............................................1.03 (5.36)  
-      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00  
-      |----BIOS Asset Tag...........................................Default string  
-      |----BIOS Firmware Type.......................................1  
-      |----Product Name.............................................MS-A2  
-      |----Vendor Name..............................................Micro Computer (HK) Tech Limited  
-      |----Family...................................................MINISFORUM  
+      |----BIOS Vendor..............................................American Megatrends International, LLC.   
+      |----BIOS Version.............................................1.03 (5.36)   
+      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00   
+      |----BIOS Asset Tag...........................................Default string   
+      |----BIOS Firmware Type.......................................1   
+      |----Product Name.............................................MS-A2   
+      |----Vendor Name..............................................Micro Computer (HK) Tech Limited   
+      |----Family...................................................MINISFORUM   
 
 This confirms the cores and hyperthreading settings  
- \==+CPU Info :  
-         |----Num Packages..........................................1  
-         |----Num Cores.............................................16  
-         |----Num Licensable Cores..................................16  
-         |----Num Threads...........................................32  
-         |----Hyperthreading Active.................................true  
-         |----Hyperthreading Supported..............................true  
-         |----Hyperthreading Enabled................................true  
-         |----Hyperthreading Mitigated..............................true  
+ \==+CPU Info :   
+         |----Num Packages..........................................1   
+         |----Num Cores.............................................16   
+         |----Num Licensable Cores..................................16   
+         |----Num Threads...........................................32   
+         |----Hyperthreading Active.................................true   
+         |----Hyperthreading Supported..............................true   
+         |----Hyperthreading Enabled................................true   
+         |----Hyperthreading Mitigated..............................true   
 
 Power policy  
-\==+CPU Power Management Info :  
-         |----Current Policy........................................Balanced  
-         |----Hardware Support......................................ACPI P-states, ACPI C-states  
+\==+CPU Power Management Info :   
+         |----Current Policy........................................Balanced   
+         |----Hardware Support......................................ACPI P-states, ACPI C-states   
 
 64GB of RAM  
-         |----Physical Mem..........................................66229465088 bytes  
+         |----Physical Mem..........................................66229465088 bytes   
 
 Installed drives:  
 "Name":  "t10.NVMe____Samsung_SSD_990_PRO_2TB_________________3B6D415144382500"  
