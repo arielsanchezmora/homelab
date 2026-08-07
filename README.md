@@ -111,33 +111,33 @@ Installed drives:
 Using ```esxcfg-info | more```
 
 This confirms BIOS  
-      |----BIOS Vendor..............................................American Megatrends International, LLC.
-      |----BIOS Version.............................................1.03 (5.36)
-      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00
-      |----BIOS Asset Tag...........................................Default string
-      |----BIOS Firmware Type.......................................1
-      |----Product Name.............................................MS-A2
-      |----Vendor Name..............................................Micro Computer (HK) Tech Limited
-      |----Family...................................................MINISFORUM
+      |----BIOS Vendor..............................................American Megatrends International, LLC.  
+      |----BIOS Version.............................................1.03 (5.36)  
+      |----BIOS ReleaseDate.........................................2026-04-01T00:00:00  
+      |----BIOS Asset Tag...........................................Default string  
+      |----BIOS Firmware Type.......................................1  
+      |----Product Name.............................................MS-A2  
+      |----Vendor Name..............................................Micro Computer (HK) Tech Limited  
+      |----Family...................................................MINISFORUM  
 
 This confirms the cores and hyperthreading settings  
       \==+CPU Info :
-         |----Num Packages..........................................1
-         |----Num Cores.............................................16
-         |----Num Licensable Cores..................................16
-         |----Num Threads...........................................32
-         |----Hyperthreading Active.................................true
-         |----Hyperthreading Supported..............................true
-         |----Hyperthreading Enabled................................true
-         |----Hyperthreading Mitigated..............................true
+         |----Num Packages..........................................1  
+         |----Num Cores.............................................16  
+         |----Num Licensable Cores..................................16  
+         |----Num Threads...........................................32  
+         |----Hyperthreading Active.................................true  
+         |----Hyperthreading Supported..............................true  
+         |----Hyperthreading Enabled................................true  
+         |----Hyperthreading Mitigated..............................true  
 
 Power policy  
       \==+CPU Power Management Info :
-         |----Current Policy........................................Balanced
-         |----Hardware Support......................................ACPI P-states, ACPI C-states
+         |----Current Policy........................................Balanced  
+         |----Hardware Support......................................ACPI P-states, ACPI C-states  
 
 128GB of RAM  
-         |----Physical Mem..........................................134948941824 bytes
+         |----Physical Mem..........................................134948941824 bytes  
 
 Installed drives:  
 "Name":  "t10.NVMe____SHGP312D500GM____________________________8C3BE326002EE4AC"  
