@@ -54,7 +54,8 @@ Use this blog post for [updating firmware](https://williamlam.com/2025/07/quick-
 These are the BIOS settings I ended up selecting (note some are discussed in the comments by James and not the main blog post):
 
 Originally came with v1.02  
-![ms-a2 v1.02.png]("images/ms-a2 v1.02.png")  
+![ms-a2 v1.02.png](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20v1.02.png)
+![]("images/ms-a2 v1.02.png")  
 
 
 ## Hardware details
