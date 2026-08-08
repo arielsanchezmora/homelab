@@ -49,13 +49,30 @@ Updated RouterOS using WinBox to 7.23.3 (2026-Jul-30 14:17)
 
 ## BIOS update
 
-Use this blog post for [updating firmware](https://williamlam.com/2025/07/quick-tip-updating-firmware-on-minisforum-ms-a2.html). I am currently on v1.03. 
-
-These are the BIOS settings I ended up selecting (note some are discussed in the comments by James and not the main blog post):
+Use this blog post for [updating firmware](https://williamlam.com/2025/07/quick-tip-updating-firmware-on-minisforum-ms-a2.html). Latest is currently v1.03. 
 
 Originally came with v1.02  
 ![ms-a2 v1.02.png](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20v1.02.png)
-![]("images/ms-a2 v1.02.png")  
+
+This is how the v1.03 upgrade looks like following William's instructions
+![MS-A2 Bios upgrade](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20bios%20upgrade.png)  
+
+Once it reboots you can confirm v1.03, and all settings will be reset, including the secure boot you had disabled
+![ms-a2 v1.03](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20v1.03.png)  
+
+I changed 3 settings:
+
+Disable TPM as it's not compatible with ESXi
+![ms-a2 disable TPM](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20disable%20tpm.png)  
+
+Set MS-A2 to silent mode (don't worry, it can still spin up when needed)  
+![Set silent mode](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20bios%20silent%20mode.png)  
+
+Set tjmax
+![Set tjmax](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20tjmax.png)  
+
+And set nvme to be first boot so kickstarter script will work properly
+![boot to nvme first](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20boot%20options.png)  
 
 
 ## Hardware details
@@ -69,6 +86,7 @@ _To identify the NVMe device label for the ESX installation (e.g. --disk=<ID>) a
 For the "identify the IP address" part, assuming you have DHCP and IPv4, I used the following command:
 
 ```esxcfg-info | grep "IPv4 Address"```
+![MS-A2 installer shell](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20installer%20shell.png)  
 
 ### Host 1:
 
