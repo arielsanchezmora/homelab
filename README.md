@@ -60,18 +60,18 @@ This is how the v1.03 upgrade looks like following William's instructions
 Once it reboots you can confirm v1.03, and all settings will be reset, including the secure boot you had disabled
 ![ms-a2 v1.03](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20v1.03.png)  
 
-I changed 3 settings:
+I changed 4 settings:
 
-Disable TPM as it's not compatible with ESXi
+1. Disable TPM as it's not compatible with ESXi
 ![ms-a2 disable TPM](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20disable%20tpm.png)  
 
-Set MS-A2 to silent mode (don't worry, it can still spin up when needed)  
+2. Set MS-A2 to silent mode (don't worry, it can still spin up when needed)  
 ![Set silent mode](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20bios%20silent%20mode.png)  
 
-Set tjmax
+3. Set tjmax to 78
 ![Set tjmax](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20tjmax.png)  
 
-And set nvme to be first boot so kickstarter script will work properly
+4. Set nvme to be first boot so kickstarter script will work properly
 ![boot to nvme first](https://github.com/arielsanchezmora/homelab/blob/main/images/ms-a2%20boot%20options.png)  
 
 
