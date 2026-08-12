@@ -38,6 +38,10 @@ Port
 | Port 4 | Admin Laptop ethernet, untagged and only on vlan 30 | 
 | Port 5 | ASUS uplink router LAN 1 (1GB) on the Asus internal dhcp network|  
 
+Perhaps because of the newer firmware, ome of the screens looked just a bit different. This is how step 9 looked for me:
+<img width="685" height="446" alt="image" src="https://github.com/user-attachments/assets/202ae5d5-1e83-42e5-8b8a-e50146c03eef" />
+
+
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
 
