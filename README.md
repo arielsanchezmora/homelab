@@ -27,14 +27,15 @@ Battery protected:
 
 ## Data
 
-The Mikrotik router is being cabled in the same manner as in the [William Lam's VCF 9 Lab Network diagram post](https://williamlam.com/2025/09/my-vcf-9-lab-network-diagram.html) and I am using the same 10G RJ45 to SFP connectors William recommended and detailed in the BOM
+The Mikrotik router is being cabled in a similar manner as in the [William Lam's VCF 9 Lab Network diagram post](https://williamlam.com/2025/09/my-vcf-9-lab-network-diagram.html) and I am using the same 10G RJ45 to SFP connectors William recommended and detailed in the BOM
 
 Port
 | Port | Connects to |  
 | --- | --- |  
-| Port 1 | ASUS uplink router LAN 1 (1GB) |  
-| Port 2 | MS-A2 host SFP port 1 (10GB with adapter) |  
-| Port 3 | MS-A2 host SFP port 1 (10GB with adapter) |  
+| Port 1 | MS-A2 host SFP port 1 (10GB with adapter) trunk with vlans 30,40,50,60,70 |  
+| Port 2 | MS-A2 host SFP port 1 (10GB with adapter) trunk with vlans 30,40,50,60,70 |  
+| Port 3 | Admin Laptop ethernet only on vlan 30 |
+| Port 5 | ASUS uplink router LAN 1 (1GB) on the Asus internal dhcp network|  
 
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
