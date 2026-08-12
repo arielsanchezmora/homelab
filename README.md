@@ -32,9 +32,10 @@ The Mikrotik router is being cabled in a similar manner as in the [William Lam's
 Port
 | Port | Connects to |  
 | --- | --- |  
-| Port 1 | MS-A2 host SFP port 1 (10GB with adapter) trunk with vlans 30,40,50,60,70 |  
-| Port 2 | MS-A2 host SFP port 1 (10GB with adapter) trunk with vlans 30,40,50,60,70 |  
-| Port 3 | Admin Laptop ethernet only on vlan 30 |
+| Port 1 | MS-A2 host SFP port 1 (10GB with adapter), trunk with vlans 30,40,50,60,70 |  
+| Port 2 | MS-A2 host SFP port 1 (10GB with adapter), trunk with vlans 30,40,50,60,70 |  
+| Port 3 | Future connection to Sodola 10G switch, trunk with vlans 30,40,50,60,70 |  
+| Port 4 | Admin Laptop ethernet, untagged and only on vlan 30 | 
 | Port 5 | ASUS uplink router LAN 1 (1GB) on the Asus internal dhcp network|  
 
 # Network
