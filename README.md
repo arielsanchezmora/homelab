@@ -38,6 +38,13 @@ Port
 | Port 4 | Admin Laptop ethernet, untagged and only on vlan 30 | 
 | Port 5 | ASUS uplink router LAN 1 (1GB) on the Asus internal dhcp network|  
 
+# DNS and NTP  
+
+Those of you with VMware experience will know first hand that DNS and NTP are crucial components on which VMware relies on heavily. I've decided to deploy the new appliance William Lam has released (not a VMware product, this is William's brain child)
+
+https://williamlam.com/2026/07/vcf-infrastructure-services-vis-appliance-for-vcf-9-1-lab-poc.html
+
+I will deploy v1.0.3 and assign it the IP address 172.30.0.9 which I believe is unused.
 
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
@@ -45,12 +52,19 @@ Port
 Relevant Mikrotik William Lam posts:
 https://williamlam.com/2025/07/initial-mikrotik-router-switch-configuration-for-vcf-9-0.html#more-189493
 
-Updated RouterOS using WinBox to 7.23.3 (2026-Jul-30 14:17)
+Updated RouterOS using WinBox to 7.23.3 (2026-Jul-30 14:17)  
 
-Perhaps because of the newer firmware, some of the screens looked just a bit different. This is how step 9 looked for me:
+Perhaps because of the newer firmware, some of the screens looked just a bit different. This is how step 9 looked for me:  
+
 <img width="685" height="446" alt="image" src="https://github.com/user-attachments/assets/202ae5d5-1e83-42e5-8b8a-e50146c03eef" />
 
 <img width="855" height="306" alt="image" src="https://github.com/user-attachments/assets/26bd6932-519e-4ae1-9cbd-543948907ad9" />
+
+In step 10 of the article, lamw didn't include the actual dhcp server dialogs but it's easy to figure it out:  
+
+<img width="721" height="1031" alt="image" src="https://github.com/user-attachments/assets/3241c51c-d2d3-4c9d-861e-1872bfda93ea" />
+
+<img width="672" height="751" alt="image" src="https://github.com/user-attachments/assets/c0353efa-9d9a-4d2a-884f-50e8f6ae1e78" />
 
 
 # Host details
