@@ -1,5 +1,5 @@
 # VCF Homelab
-Notes for my homelab
+These are the notes of my homelab build.
 
 This is an all-new VCF 9.1 lab. I am using William Lam's hardware recommendations and following his blog. The main blog post I am following is the [VCF 9.1 lab in a box.](https://github.com/lamw/vcf-91-in-box) but if I reference another post I'll detail it below.
 
