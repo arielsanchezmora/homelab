@@ -52,7 +52,7 @@ https://lamw.github.io/vcf-infrastructure-service-appliance/deploy.html#standalo
 
 The ovf tool is located [here](https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest) but if you are in Windows like me, note the deployment script is in Linux format (.sh) so you may want to use the WSL and browse to /mnt/c to access your Windows file structure. I used the following to add the extracted ovftool path inside WSL.  
 
-```echo 'export PATH="$PATH:/path/to/your/folder"' >> ~/.bashrc  
+```echo 'export PATH="$PATH:/path/to/your/folder"' >> ~/.bashrc  ```
 
 Deployment script to ESX is in the scripts folder in Github:  
 
