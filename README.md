@@ -40,11 +40,26 @@ Port
 
 # DNS and NTP  
 
-Those of you with VMware experience will know first hand that DNS and NTP are crucial components on which VMware relies on heavily. I've decided to deploy the new appliance William Lam has released (not a VMware product, this is William's brain child)
+Those of you with VMware experience will know first hand that DNS and NTP are crucial components on which VMware relies on heavily. I've decided to deploy the new "VCF Infrastructure Services" appliance William Lam has released (not a VMware product, this is William's brain child for the vCommunity):  
 
 https://williamlam.com/2026/07/vcf-infrastructure-services-vis-appliance-for-vcf-9-1-lab-poc.html
 
-I will deploy v1.0.3 and assign it the IP address 172.30.0.9 which I believe is unused.
+To help install the environment, I have an older i5/64GB Intel NUC running a fresh unlicensed esx 9.1 install (with allowLegacyCPU=true as a shit+o boot option) on 172.30.0.8 (which I haven't seen used elsewhere). I added vlan 30 (which is the management vlan used throughout) in the VM Network default portgroup, and make sure the time on the host is correct and the certificate is valid, as this can make the ovftool deployment fail, amongst other things.  
+
+I will deploy VIS v1.0.3 there and assign the IP address 172.30.0.9 which I see in the deployment script located in the documentation:  
+
+https://lamw.github.io/vcf-infrastructure-service-appliance/deploy.html#standalone-esx-deployment-with-ovf-tool
+
+The ovf tool is located [here](https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest) but if you are in Windows like me, note the deployment script is in Linux format (.sh) so you may want to use the WSL and browse to /mnt/c to access your Windows file structure. I used the following to add the extracted ovftool path inside WSL.  
+
+```echo 'export PATH="$PATH:/path/to/your/folder"' >> ~/.bashrc  
+
+Deployment script to ESX is in the scripts folder in Github:  
+
+https://github.com/lamw/vcf-infrastructure-service-appliance/tree/main/scripts
+
+I modified mine a little to match my environment, if you want to see it, it's located in this same folder as deploy_vis_esx_asm.sh   
+
 
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
