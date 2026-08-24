@@ -54,11 +54,17 @@ The ovf tool is located [here](https://developer.broadcom.com/tools/open-virtual
 
 ```echo 'export PATH="$PATH:/path/to/your/folder"' >> ~/.bashrc  ```
 
-Deployment script to ESX is in the scripts folder in Github:  
+I also had to tell my WSL config to mirror my interfaces from my laptop since I have a wired connection to this new lab; the default is a NAT, which wouldn't find my host.  
+
+Deployment script to ESX is in lamw's VIS scripts folder in Github:  
 
 https://github.com/lamw/vcf-infrastructure-service-appliance/tree/main/scripts
 
-I modified mine a little to match my environment, if you want to see it, it's located in this same folder as deploy_vis_esx_asm.sh   
+I modified mine a little to match my environment, if you want to see it, it's located in this same folder as deploy_vis_esx_asm.sh, but it's very similar   
+
+<img width="957" height="652" alt="image" src="https://github.com/user-attachments/assets/cbaa84cc-4ff0-4f5e-9c6e-58dbf4feadb5" />
+
+<img width="2732" height="1767" alt="image" src="https://github.com/user-attachments/assets/100f04f9-d2e6-4e43-8890-537bc0dd5153" />
 
 
 # Network
