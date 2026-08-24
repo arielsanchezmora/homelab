@@ -66,6 +66,12 @@ I modified mine a little to match my environment, if you want to see it, it's lo
 
 <img width="2732" height="1767" alt="image" src="https://github.com/user-attachments/assets/100f04f9-d2e6-4e43-8890-537bc0dd5153" />
 
+Immediately configured and enabled DNS and NTP, it's very easy to follow the instructions. As I advance in the lab, I will add DNS entries  
+
+<img width="3385" height="1850" alt="image" src="https://github.com/user-attachments/assets/f48bef93-f59a-448a-941a-6a476e779b86" />
+
+<img width="3435" height="1744" alt="image" src="https://github.com/user-attachments/assets/9ee880d7-989b-4afe-a4b1-e75b569e6a8d" />
+
 
 # Network
 1st step is to setup the base network. I purchased a MikroTik CRS304-4XG-IN in Sep 22, 2025 for $186.90. 
