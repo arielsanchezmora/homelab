@@ -218,3 +218,19 @@ Remember the 3 SSDs will be used in this manner:
 NVMe 1: ESXi installation, ESX-OSData and VMFS volume  
 NVMe 2: NVMe Tiering  
 NVMe 3: vSAN ESA  
+
+
+## Other notable related homelab posts
+
+Craig Cusick pointed me to other blog posts of people building similar labs that more tidbits of information:
+
+https://amayacitta.co.uk/vcf9-lab/  
+
+https://sdn-warrior.org/posts/vcf9-ms-a2-special/  
+
+https://vkasaert.com/2026/02/03/homelab-vcf-9-in-a-box/  
+
+
+
+
+
